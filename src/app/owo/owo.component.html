@@ -1,0 +1,118 @@
+<body>
+  <MenuComponent />
+  <main>
+    <app-search-box />
+    <section>
+      <section class="search-result">
+        <!-- <section>
+          @if(isLogin){
+          <p>Bienvenido, {{ username }}</p>
+          <img
+            (click)="greet()"
+            src="https://github.com/alejom55.png"
+            alt="photo"
+          />
+          <app-games
+            (addFavoriteEvent)="getFavorite($event)"
+            username="{{ username }}"
+          />
+          @if(favGame != ''){
+          <p>Tu juego favorito es {{ favGame }}</p>
+          } }@else{
+          <p>Inicia sesion!</p>
+          <button (click)="isLogin = true">Iniciar Sesion</button>
+          }
+        </section> -->
+
+        <div clas="promo-section">
+          <span class="promo-label">Más económico</span>
+        </div>
+        <div class="flight-info">
+          <div class="flight-details">
+            <div class="flight-time">{{ flights.flightDate }}</div>
+            <div class="flight-location">{{ flights.flightFrom }}</div>
+            <div class="duration-info">
+              <div>Duración</div>
+              <div>0 h 55 min</div>
+            </div>
+            <div class="flight-time">{{ flights.arriveDate }}</div>
+            <div class="flight-location">bog</div>
+          </div>
+          @if(showPrice){
+          <div class="flight-price">
+            <div>Adulto desde</div>
+            <div class="price">COP 90.806,00</div>
+          </div>
+          <div class="flight-price close-price-options" (click)="fnShowPrice()">
+            Abrir
+          </div>
+          }@else{
+          <div class="flight-price close-price-options" (click)="fnShowPrice()">
+            Cerrar
+          </div>
+          }
+        </div>
+        <div class="flight-route">
+          <a href="#">Directo</a>
+        </div>
+        @if(!showPrice){
+        <div class="price-options">
+          <div class="plain-type">Airbus A320</div>
+          <div class="flight-card-container">
+            <div class="flight-card">
+              <div class="flight-card-body">
+                <div class="flight-card-title">Basic</div>
+                <ul>
+                  <li>Bolso o mochila pequeña</li>
+                  <li>Cambio con cargo</li>
+                  <li>No aplican beneficios por categorías de socios</li>
+                </ul>
+              </div>
+              <div class="flight-card-footer">
+                <div>COP 90.806,00</div>
+                <a href="#">Más detalles</a>
+                <button>Elegir</button>
+              </div>
+            </div>
+            <div class="flight-card">
+              <div class="flight-card-body">
+                <div class="flight-card-title">Light</div>
+                <ul>
+                  <li>Bolso o mochila pequeña</li>
+                  <li>Equipaje de mano de 10 kg</li>
+                  <li>Cambio con cargo</li>
+                  <li>Postulación a UPG con tramos</li>
+                </ul>
+              </div>
+              <div class="flight-card-footer">
+                <div>COP 110.735,00</div>
+                <a href="#">Más detalles</a>
+                <button>Elegir</button>
+              </div>
+            </div>
+            <div class="flight-card">
+              <div class="flight-card-body">
+                <div class="flight-card-title">Full</div>
+                <ul>
+                  <li>Bolso o mochila pequeña</li>
+                  <li>Equipaje de mano de 10 kg</li>
+                  <li>1 equipaje de bodega 23 kg</li>
+                  <li>Cambio sin cargo</li>
+                  <li>Selección de asiento estándar</li>
+                  <li>Devolución total</li>
+                  <li>Postulación a UPG con tramos</li>
+                </ul>
+              </div>
+              <div class="flight-card-footer">
+                <div>COP 130.706,00</div>
+                <a href="#">Más detalles</a>
+                <button>Elegir</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        }
+      </section>
+    </section>
+  </main>
+</body>
